@@ -41,6 +41,12 @@
 </pre>
 
 <p align="center">
+  <img src="assets/ledger.svg"
+       alt="25 repositories, 17 written in C, 141 commits, active since 2022"
+       width="100%">
+</p>
+
+<p align="center">
   Everything here is plain C99 — one header, one source file, copy them in.
   <br>
   Projects become clickable after hardware validation and public release.

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 234" role="img" aria-labelledby="st sd">
+  <title id="st">Jonas Atelier workshop ledger</title>
+  <desc id="sd">25 repositories, 17 written in C, 141 commits, active since 2022, with a language bar by repository.</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d2238"/><stop offset="1" stop-color="#102f34"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#ffffff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="barclip"><rect x="60" y="150" width="1080" height="14" rx="7"/></clipPath>
+    <style>
+      .hd  { font-family: ui-monospace, monospace; font-size: 13px; fill: #9edbc4; letter-spacing: 3px; }
+      .num { font-family: system-ui, sans-serif; font-size: 44px; font-weight: 750; fill: #f6f1e8; }
+      .cap { font-family: ui-monospace, monospace; font-size: 13px; fill: #9edbc4; letter-spacing: 1.5px; }
+      .leg { font-family: ui-monospace, monospace; font-size: 12px; fill: #9edbc4; }
+      .foot{ font-family: ui-monospace, monospace; font-size: 11px; fill: #5f8f88; letter-spacing: 1px; }
+      .tile { opacity: 0; animation: rise .7s ease-out forwards; }
+      .seg  { transform: scaleX(0); transform-origin: 60px 0; animation: grow .9s cubic-bezier(.2,.8,.3,1) forwards; }
+      .shine { animation: pan 5s linear infinite; }
+      @keyframes rise { from { opacity:0; transform: translateY(10px); } to { opacity:1; transform: translateY(0); } }
+      @keyframes grow { to { transform: scaleX(1); } }
+      @keyframes pan  { from { transform: translateX(-260px); } to { transform: translateX(1200px); } }
+      @media (prefers-reduced-motion: reduce) {
+        .tile { opacity:1; animation:none; } .seg { transform:none; animation:none; } .shine { animation:none; opacity:0; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="234" rx="24" fill="url(#bg3)"/>
+  <text class="hd" x="60" y="44">WORKSHOP LEDGER</text>
+  <text class="hd" x="1140" y="44" text-anchor="end" fill="#f2bd68">SNAPSHOT 2026-08-25</text>
+
+  <g class="tile" style="animation-delay:0.10s">
+    <text class="num" x="210" y="98" text-anchor="middle">25</text>
+    <text class="cap" x="210" y="120" text-anchor="middle">repositories</text>
+  </g>
+  <g class="tile" style="animation-delay:0.23s">
+    <text class="num" x="470" y="98" text-anchor="middle">17</text>
+    <text class="cap" x="470" y="120" text-anchor="middle">written in C</text>
+  </g>
+  <g class="tile" style="animation-delay:0.36s">
+    <text class="num" x="730" y="98" text-anchor="middle">141</text>
+    <text class="cap" x="730" y="120" text-anchor="middle">commits</text>
+  </g>
+  <g class="tile" style="animation-delay:0.49s">
+    <text class="num" x="990" y="98" text-anchor="middle">2022</text>
+    <text class="cap" x="990" y="120" text-anchor="middle">since</text>
+  </g>
+
+  <g clip-path="url(#barclip)">
+    <rect x="60.0" y="150" width="734.4" height="14" fill="#70e1b2" style="animation-delay:0.50s" class="seg"/>
+    <rect x="794.4" y="150" width="86.4" height="14" fill="#f2bd68" style="animation-delay:0.59s" class="seg"/>
+    <rect x="880.8" y="150" width="86.4" height="14" fill="#51c99c" style="animation-delay:0.68s" class="seg"/>
+    <rect x="967.2" y="150" width="43.2" height="14" fill="#9edbc4" style="animation-delay:0.77s" class="seg"/>
+    <rect x="1010.4" y="150" width="43.2" height="14" fill="#5fbf9a" style="animation-delay:0.86s" class="seg"/>
+    <rect x="1053.6" y="150" width="86.4" height="14" fill="#2f6a63" style="animation-delay:0.95s" class="seg"/>
+    <rect class="shine" x="0" y="150" width="260" height="14" fill="url(#sweep)"/>
+  </g>
+
+  <circle cx="60" cy="187" r="4.5" fill="#70e1b2"/><text class="leg" x="71" y="191">C 17</text>
+  <circle cx="127" cy="187" r="4.5" fill="#f2bd68"/><text class="leg" x="138" y="191">C++ 2</text>
+  <circle cx="202" cy="187" r="4.5" fill="#51c99c"/><text class="leg" x="213" y="191">Makefile 2</text>
+  <circle cx="318" cy="187" r="4.5" fill="#9edbc4"/><text class="leg" x="329" y="191">Python 1</text>
+  <circle cx="417" cy="187" r="4.5" fill="#5fbf9a"/><text class="leg" x="428" y="191">JavaScript 1</text>
+  <circle cx="550" cy="187" r="4.5" fill="#2f6a63"/><text class="leg" x="561" y="191">other 2</text>
+
+  <text class="foot" x="60" y="218">every repository, public and private &#183; language by repository, not bytes</text>
+</svg>
