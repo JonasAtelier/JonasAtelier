@@ -41,6 +41,12 @@
 </pre>
 
 <p align="center">
+  <img src="assets/control-loop.svg"
+       alt="A pulse circulating a PID control loop while the step response settles on its setpoint"
+       width="100%">
+</p>
+
+<p align="center">
   Everything here is plain C99 — one header, one source file, copy them in.
   <br>
   Projects become clickable after hardware validation and public release.
