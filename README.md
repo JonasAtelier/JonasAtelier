@@ -7,8 +7,15 @@
 <h1 align="center">Jonas Atelier</h1>
 
 <p align="center">
-  Portable embedded C for robots — drop-in libraries with no dependencies,
-  no allocation, and no build system to adopt.
+  Drivers for the parts robots are actually built from — motors and encoders,
+  sensing, power, buses. Plain C99, no dependencies, no allocation, and no
+  build system to adopt: copy two files in and go.
+</p>
+
+<p align="center">
+  Every register value is traced to a line in the datasheet, and the comment
+  next to it says which one. Where a vendor does not publish a register map,
+  the README says so rather than pretending otherwise.
 </p>
 
 <p align="center">
