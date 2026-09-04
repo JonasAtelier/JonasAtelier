@@ -22,7 +22,6 @@
   ✅ Available · 🧪 Hardware validation · 🚧 On-going
 </p>
 
-<!-- tree:start -->
 <pre>
 ├── ⚡ ESP32 / ESP-IDF
 │   ├── esp-c620-control   — RoboMaster M3508 / C620 motor control 🧪
@@ -47,7 +46,6 @@
     ├── f_complementary — Complementary filter               🧪
     └── f_particle      — Particle filter                    🧪
 </pre>
-<!-- tree:end -->
 
 <p align="center">
   <img src="assets/ledger.svg"
