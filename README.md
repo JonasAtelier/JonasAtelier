@@ -22,30 +22,32 @@
   ✅ Available · 🧪 Hardware validation · 🚧 On-going
 </p>
 
+<!-- tree:start -->
 <pre>
 ├── ⚡ ESP32 / ESP-IDF
-│   ├── esp-c620-control      — RoboMaster M3508 / C620 motor control  🧪
-│   ├── esp-bmi088-imu        — BMI088 accelerometer + gyroscope       🧪
-│   ├── esp-as5600-encoder    — AS5600 magnetic rotary encoder         🚧
-│   ├── esp-ina2xx-sensor     — INA219/226/228 power monitors          🧪
-│   ├── esp-mcp23-expander    — MCP23017 I/O expander                  🚧
-│   ├── esp-ps-controller     — DualShock 4 / DualSense over BT        🧪
-│   ├── esp-dw1000-uwb        — DW1000 UWB two-way ranging             🧪
-│   └── esp-sn65hvd230-can    — Classic CAN over TWAI                  ✅  <a href="https://github.com/JonasAtelier/esp-sn65hvd230-can">🔗</a>
+│   ├── esp-c620-control   — RoboMaster M3508 / C620 motor control 🧪
+│   ├── esp-bmi088-imu     — BMI088 accelerometer + gyroscope      🧪
+│   ├── esp-as5600-encoder — AS5600 magnetic rotary encoder        🚧
+│   ├── esp-ina2xx-sensor  — INA219/226/228 power monitors         🧪
+│   ├── esp-ps-controller  — DualShock 4 / DualSense over BT       🧪
+│   ├── esp-mcp23-expander — MCP23017 I/O expander                 🚧
+│   ├── esp-sn65hvd230-can — Classic CAN over TWAI                 ✅  <a href="https://github.com/JonasAtelier/esp-sn65hvd230-can">🔗</a>
+│   └── esp-dw1000-uwb     — DW1000 UWB two-way ranging            🧪
 │
 ├── 🐧 Linux
-│   ├── nv-ps-controller      — PS4 / PS5 pads on NVIDIA Jetson        🚧
-│   └── Robust                — ROS 2's model, in plain C, one device  🚧
+│   ├── nv-ps-controller — PS4 / PS5 pads on NVIDIA Jetson       🚧
+│   └── Robust           — ROS 2's model, in plain C, one device 🚧
 │
 └── 🧰 General
-    ├── upid                  — Portable PID control                   ✅  <a href="https://github.com/JonasAtelier/upid">🔗</a>
-    ├── fsm                   — Table-driven finite state machines     🧪
-    ├── kin                   — Forward / inverse kinematics           🧪
-    ├── imp                   — Impedance &amp; admittance control         🧪
-    ├── f_kalman              — Scalar Kalman filter                   🧪
-    ├── f_complementary       — Complementary filter                   🧪
-    └── f_particle            — Particle filter                        🧪
+    ├── upid            — Portable PID control               ✅  <a href="https://github.com/JonasAtelier/upid">🔗</a>
+    ├── fsm             — Table-driven finite state machines 🧪
+    ├── kin             — Forward / inverse kinematics       🧪
+    ├── imp             — Impedance &amp; admittance control     🧪
+    ├── f_kalman        — Scalar Kalman filter               🧪
+    ├── f_complementary — Complementary filter               🧪
+    └── f_particle      — Particle filter                    🧪
 </pre>
+<!-- tree:end -->
 
 <p align="center">
   <img src="assets/ledger.svg"
