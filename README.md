@@ -19,13 +19,19 @@
 </p>
 
 <p align="center">
+  IMUs share one subsystem, <code>esp-imu</code>, built the way Linux IIO is:
+  every chip probes into the same <code>struct imu_dev</code> and reads out
+  in SI units, so swapping the sensor never touches the filter above it.
+</p>
+
+<p align="center">
   ✅ Available · 🧪 Hardware validation · 🚧 On-going
 </p>
 
 <pre>
 ├── ⚡ ESP32 / ESP-IDF
 │   ├── esp-c620-control   — RoboMaster M3508 / C620 motor control 🧪
-│   ├── esp-bmi088-imu     — BMI088 accelerometer + gyroscope      🧪
+│   ├── esp-imu            — IMUs: MPU-6050, ICM-45686, BMI088     🧪
 │   ├── esp-as5600-encoder — AS5600 magnetic rotary encoder        🚧
 │   ├── esp-ina2xx-sensor  — INA219/226/228 power monitors         🧪
 │   ├── esp-ps-controller  — DualShock 4 / DualSense over BT       🧪
