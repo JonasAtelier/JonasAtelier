@@ -19,11 +19,12 @@
 </p>
 
 <p align="center">
-  IMUs, barometers and encoders each share one subsystem, <code>esp-imu</code>,
-  <code>esp-baro</code> or <code>esp-encoder</code>, built the way Linux IIO is:
-  every chip probes into the same <code>struct imu_dev</code>,
-  <code>struct baro_dev</code> or <code>struct encoder_dev</code> and reads out
-  one sample shape, so swapping the sensor never touches the code above it.
+  IMUs, barometers, encoders and magnetometers each share one subsystem,
+  <code>esp-imu</code>, <code>esp-baro</code>, <code>esp-encoder</code> or
+  <code>esp-compass</code>, built the way Linux IIO is: every chip probes into
+  the same <code>struct imu_dev</code>, <code>struct baro_dev</code>,
+  <code>struct encoder_dev</code> or <code>struct compass_dev</code> and reads
+  out one sample shape, so swapping the sensor never touches the code above it.
 </p>
 
 <p align="center">
@@ -35,6 +36,8 @@
 │   ├── esp-c620-control   — RoboMaster M3508 / C620 motor control 🧪
 │   ├── esp-imu            — IMUs: MPU-6050, ICM-45686, BMI088     🧪
 │   ├── esp-encoder        — Encoders: AS5600, AS5047P, AMT102-V   🚧
+│   ├── esp-baro           — Baro: BMP280, BMP388, DPS310, MS5611  🧪
+│   ├── esp-compass        — Magnetometers: QMC5883L, QMC5883P     🧪
 │   ├── esp-ina2xx-sensor  — INA219/226/228 power monitors         🧪
 │   ├── esp-ps-controller  — DualShock 4 / DualSense over BT       🧪
 │   ├── esp-mcp23-expander — MCP23017 I/O expander                 🚧
