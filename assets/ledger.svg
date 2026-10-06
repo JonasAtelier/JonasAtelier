@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 234" role="img" aria-labelledby="st sd">
   <title id="st">Jonas Atelier workshop ledger</title>
-  <desc id="sd">41 repositories, 33 written in C, 217 commits, active since 2022, with a language bar by repository.</desc>
+  <desc id="sd">82 repositories, 67 written in C, 712 commits, active since 2023, with a language bar by repository.</desc>
   <defs>
     <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0d2238"/><stop offset="1" stop-color="#102f34"/>
@@ -31,41 +31,41 @@
 
   <rect width="1200" height="234" rx="24" fill="url(#bg3)"/>
   <text class="hd" x="60" y="44">WORKSHOP LEDGER</text>
-  <text class="hd" x="1140" y="44" text-anchor="end" fill="#f2bd68">SNAPSHOT 2026-09-04</text>
+  <text class="hd" x="1140" y="44" text-anchor="end" fill="#f2bd68">SNAPSHOT 2026-10-06</text>
 
   <g class="tile" style="animation-delay:0.10s">
-    <text class="num" x="210" y="98" text-anchor="middle">41</text>
+    <text class="num" x="210" y="98" text-anchor="middle">82</text>
     <text class="cap" x="210" y="120" text-anchor="middle">repositories</text>
   </g>
   <g class="tile" style="animation-delay:0.23s">
-    <text class="num" x="470" y="98" text-anchor="middle">33</text>
+    <text class="num" x="470" y="98" text-anchor="middle">67</text>
     <text class="cap" x="470" y="120" text-anchor="middle">written in C</text>
   </g>
   <g class="tile" style="animation-delay:0.36s">
-    <text class="num" x="730" y="98" text-anchor="middle">217</text>
+    <text class="num" x="730" y="98" text-anchor="middle">712</text>
     <text class="cap" x="730" y="120" text-anchor="middle">commits</text>
   </g>
   <g class="tile" style="animation-delay:0.49s">
-    <text class="num" x="990" y="98" text-anchor="middle">2022</text>
+    <text class="num" x="990" y="98" text-anchor="middle">2023</text>
     <text class="cap" x="990" y="120" text-anchor="middle">since</text>
   </g>
 
   <g clip-path="url(#barclip)">
-    <rect x="60.0" y="150" width="869.3" height="14" fill="#70e1b2" style="animation-delay:0.50s" class="seg"/>
-    <rect x="929.3" y="150" width="52.7" height="14" fill="#f2bd68" style="animation-delay:0.59s" class="seg"/>
-    <rect x="982.0" y="150" width="52.7" height="14" fill="#51c99c" style="animation-delay:0.68s" class="seg"/>
-    <rect x="1034.6" y="150" width="26.3" height="14" fill="#9edbc4" style="animation-delay:0.77s" class="seg"/>
-    <rect x="1061.0" y="150" width="26.3" height="14" fill="#5fbf9a" style="animation-delay:0.86s" class="seg"/>
-    <rect x="1087.3" y="150" width="52.7" height="14" fill="#2f6a63" style="animation-delay:0.95s" class="seg"/>
+    <rect x="60.0" y="150" width="882.4" height="14" fill="#70e1b2" style="animation-delay:0.50s" class="seg"/>
+    <rect x="942.4" y="150" width="39.5" height="14" fill="#f2bd68" style="animation-delay:0.59s" class="seg"/>
+    <rect x="982.0" y="150" width="39.5" height="14" fill="#51c99c" style="animation-delay:0.68s" class="seg"/>
+    <rect x="1021.5" y="150" width="26.3" height="14" fill="#9edbc4" style="animation-delay:0.77s" class="seg"/>
+    <rect x="1047.8" y="150" width="26.3" height="14" fill="#5fbf9a" style="animation-delay:0.86s" class="seg"/>
+    <rect x="1074.1" y="150" width="65.9" height="14" fill="#2f6a63" style="animation-delay:0.95s" class="seg"/>
     <rect class="shine" x="0" y="150" width="260" height="14" fill="url(#sweep)"/>
   </g>
 
-  <circle cx="60" cy="187" r="4.5" fill="#70e1b2"/><text class="leg" x="71" y="191">C 33</text>
-  <circle cx="124" cy="187" r="4.5" fill="#f2bd68"/><text class="leg" x="135" y="191">C++ 2</text>
-  <circle cx="195" cy="187" r="4.5" fill="#51c99c"/><text class="leg" x="206" y="191">Makefile 2</text>
-  <circle cx="303" cy="187" r="4.5" fill="#9edbc4"/><text class="leg" x="314" y="191">JavaScript 1</text>
-  <circle cx="425" cy="187" r="4.5" fill="#5fbf9a"/><text class="leg" x="436" y="191">Python 1</text>
-  <circle cx="518" cy="187" r="4.5" fill="#2f6a63"/><text class="leg" x="529" y="191">other 2</text>
+  <circle cx="60" cy="187" r="4.5" fill="#70e1b2"/><text class="leg" x="71" y="191">C 67</text>
+  <circle cx="124" cy="187" r="4.5" fill="#f2bd68"/><text class="leg" x="135" y="191">Rust 3</text>
+  <circle cx="202" cy="187" r="4.5" fill="#51c99c"/><text class="leg" x="213" y="191">Python 3</text>
+  <circle cx="295" cy="187" r="4.5" fill="#9edbc4"/><text class="leg" x="306" y="191">C++ 2</text>
+  <circle cx="366" cy="187" r="4.5" fill="#5fbf9a"/><text class="leg" x="377" y="191">Makefile 2</text>
+  <circle cx="473" cy="187" r="4.5" fill="#2f6a63"/><text class="leg" x="484" y="191">other 5</text>
 
   <text class="foot" x="60" y="218">every repository, public and private &#183; language by repository, not bytes</text>
 </svg>
