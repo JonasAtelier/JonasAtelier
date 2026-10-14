@@ -8,8 +8,9 @@
 
 <p align="center">
   Drivers for the parts robots are actually built from — motors and encoders,
-  sensing, power, buses. Plain C99, no dependencies, no allocation, and no
-  build system to adopt: copy two files in and go.
+  sensing, power, buses. Plain C. The control and filter libraries are one
+  header and one source file; the drivers are category libraries that build
+  unchanged on ESP-IDF and the STM32 HAL.
 </p>
 
 <p align="center">
@@ -19,12 +20,12 @@
 </p>
 
 <p align="center">
-  IMUs, barometers, encoders and magnetometers each share one subsystem,
-  <code>esp-imu</code>, <code>esp-baro</code>, <code>esp-encoder</code> or
-  <code>esp-compass</code>, built the way Linux IIO is: every chip probes into
-  the same <code>struct imu_dev</code>, <code>struct baro_dev</code>,
-  <code>struct encoder_dev</code> or <code>struct compass_dev</code> and reads
-  out one sample shape, so swapping the sensor never touches the code above it.
+  Chips of one kind share one library, <code>mcu-imu</code>,
+  <code>mcu-baro</code>, <code>mcu-can</code> and thirteen more, built the way
+  Linux IIO is: every chip probes into the same <code>struct imu_dev</code>,
+  <code>struct baro_dev</code> or <code>struct can_dev</code> and reads out
+  one shape, so swapping the part never touches the code above it — and the
+  same code runs on an ESP32 and an STM32.
 </p>
 
 <p align="center">
@@ -32,43 +33,40 @@
 </p>
 
 <pre>
+├── 🔌 ESP32 + STM32 — one library per kind of chip
+│   ├── mcu-imu            — MPU-6050, ICM-45686, BMI088, WT901C-TTL    🧪
+│   ├── mcu-compass        — QMC5883L/P, IST8310, LIS3MDL, CMPS14       🧪
+│   ├── mcu-baro           — BMP280, BMP388, DPS310, MS5611             🧪
+│   ├── mcu-encoder        — AS5047P, AS5600, AMT102-V                  🧪
+│   ├── mcu-powermon       — INA219, INA226, INA228, INA237             🧪
+│   ├── mcu-stepper        — TMC2209, TMC5240                           🧪
+│   ├── mcu-esc            — DJI C610, C620, GM6020, C615; Haitai HT-03 🧪
+│   ├── mcu-servo          — Hobby servos on MCU PWM or a PCA9685       🧪
+│   ├── mcu-loadcell       — HX711, NAU7802                             🧪
+│   ├── mcu-tof            — VL53L1X, TF-Luna                           🧪
+│   ├── mcu-lidar          — LDROBOT LD19, LD06                         🧪
+│   ├── mcu-uwb            — DW1000 two-way ranging                     🧪
+│   ├── mcu-can            — MCP2515, ESP32 TWAI, STM32 bxCAN           🧪
+│   ├── mcu-rc             — CRSF/ELRS, SBUS, DJI DR16                  🧪
+│   ├── mcu-gamecontroller — DualShock 4, DualSense, Xbox over BLE      🧪
+│   └── mcu-expander       — MCP23017, MCP23S17                         🧪
+│
+├── 🔨 Build
+│   ├── esp-forge — ESP32 firmware, pinned parts and ESP-IDF v5.5.5         🚧
+│   └── stm-forge — STM32 firmware, pinned parts and ARM GNU 14.2.rel1      🚧
+│
 ├── ⚡ ESP32 / ESP-IDF
 │   ├── esp-c620-control       — RoboMaster M3508 / C620 motor control  🧪
-│   ├── esp-HT03               — HT-03 actuators, MIT protocol over CAN 🚧
 │   ├── esp-drv8323-gatedriver — DRV8323 three-phase gate driver        🚧
-│   ├── esp-tmc5240-stepper    — TMC5240 stepper, on-chip ramps         🧪
-│   ├── esp-tmc2209-stepper    — TMC2209 stepper over UART              🚧
-│   ├── esp-pca9685-pwm        — PCA9685 16-channel PWM                 🧪
-│   ├── esp-servo-pwm          — RC servos on LEDC                      🚧
-│   ├── esp-imu                — IMUs: MPU-6050, ICM-45686, BMI088      🧪
-│   ├── esp-encoder            — Encoders: AS5600, AS5047P, AMT102-V    🚧
-│   ├── esp-baro               — Baro: BMP280, BMP388, DPS310, MS5611   🧪
-│   ├── esp-compass            — Magnetometers: QMC5883L, QMC5883P      🧪
-│   ├── esp-ld19-lidar         — LD19 / LD06 360° lidar                 🚧
-│   ├── esp-vl53l1x-tof        — VL53L1X time-of-flight                 🚧
-│   ├── esp-hx711-loadcell     — HX711 load cell amplifier              🧪
-│   ├── esp-nau7802-loadcell   — NAU7802 24-bit bridge ADC              🧪
 │   ├── esp-ads1115-adc        — ADS1115 16-bit ADC                     🧪
-│   ├── esp-ina2xx-sensor      — INA219/226/228 power monitors          🧪
 │   ├── esp-max17048-fuelgauge — MAX17048 1S fuel gauge                 🧪
 │   ├── esp-bq769x0-bms        — bq769x0 3–15S pack monitor             🧪
-│   ├── esp-ps-controller      — DualShock 4 / DualSense over BT        🧪
-│   ├── esp-crsf-rc            — CRSF / ELRS receiver                   🧪
-│   ├── esp-mcp23-expander     — MCP23017 I/O expander                  🚧
 │   ├── esp-ssd1306-oled       — SSD1306 OLED                           🧪
 │   ├── esp-ws2812-led         — WS2812 LEDs over RMT                   🚧
 │   ├── esp-sn65hvd230-can     — Classic CAN over TWAI                  ✅  <a href="https://github.com/JonasAtelier/esp-sn65hvd230-can">🔗</a>
-│   ├── esp-mcp2515-can        — MCP2515 CAN over SPI                   🧪
-│   ├── esp-dw1000-uwb         — DW1000 UWB two-way ranging             🧪
 │   ├── esp-espnow-link        — ESP-NOW packets between boards         🚧
 │   ├── esp-ota-wifi           — On-demand Wi-Fi OTA                    🧪
 │   └── esp-sdlog              — Buffered SD-card logger                🚧
-│
-├── 🔩 STM32 / HAL
-│   ├── stm-imu           — IMUs: MPU-6050, ICM-45686, BMI088    🚧
-│   ├── stm-baro          — Baro: BMP280, BMP388, DPS310, MS5611 🚧
-│   ├── stm-compass       — Magnetometers: QMC5883L, QMC5883P    🚧
-│   └── stm-ina2xx-sensor — INA219/226/228 power monitors        🚧
 │
 ├── 🐧 Linux
 │   ├── nv-ps-controller — PS4 / PS5 pads on NVIDIA Jetson       🚧
@@ -96,12 +94,13 @@
 
 <p align="center">
   <img src="assets/ledger.svg"
-       alt="82 repositories, 67 written in C, 712 commits, active since 2023"
+       alt="68 repositories, 53 written in C, over 660 commits, active since 2023"
        width="100%">
 </p>
 
 <p align="center">
-  Everything here is plain C99 — one header, one source file, copy them in.
+  Everything here is plain C. The control and filter libraries are one header
+  and one source file; the drivers build unchanged on ESP-IDF and the STM32 HAL.
   <br>
   Projects become clickable after hardware validation and public release.
 </p>
