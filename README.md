@@ -35,7 +35,7 @@
 
 <p align="center">
   Chips of one kind share one library, <code>mcu-imu</code>,
-  <code>mcu-baro</code>, <code>mcu-can</code> and thirteen more, built the way
+  <code>mcu-baro</code>, <code>mcu-can</code> and fourteen more, built the way
   Linux IIO is: every chip probes into the same <code>struct imu_dev</code>,
   <code>struct baro_dev</code> or <code>struct can_dev</code> and reads out
   one shape, so swapping the part never touches the code above it — and the
@@ -53,6 +53,7 @@
 │   ├── mcu-baro           — BMP280, BMP388, DPS310, MS5611             🧪
 │   ├── mcu-encoder        — AS5047P, AS5600, AMT102-V                  🧪
 │   ├── mcu-powermon       — INA219, INA226, INA228, INA237             🧪
+│   ├── mcu-battery        — MAX17048 fuel gauge, BQ76920/30/40 BMS     🚧
 │   ├── mcu-stepper        — TMC2209, TMC5240                           🧪
 │   ├── mcu-esc            — DJI C610, C620, GM6020, C615; Haitai HT-03 🧪
 │   ├── mcu-servo          — Hobby servos on MCU PWM or a PCA9685       🧪
@@ -69,12 +70,18 @@
 │   ├── esp-forge — ESP32 firmware, pinned parts and ESP-IDF v5.5.5         🚧
 │   └── stm-forge — STM32 firmware, pinned parts and ARM GNU 14.2.rel1      🚧
 │
+├── 🤖 On the bench
+│   ├── hawk         — Quadcopter flight controller, STM32F405       🚧
+│   ├── nexus_p      — Hawk power-board monitor, STM32G030           🚧
+│   ├── nova_s3      — Swerve module, ESP32-S3, M3508 over dual CAN  🚧
+│   ├── flux_s3      — Sensored FOC, ESP32-S3, DRV8323 + AS5047P     🚧
+│   ├── dingo_s3     — Dingo quadruped on ESP32-S3, 12 servos        🚧
+│   └── rmboard_f427 — RoboMaster Board A bring-up, STM32F427        🚧
+│
 ├── ⚡ ESP32 / ESP-IDF
 │   ├── esp-c620-control       — RoboMaster M3508 / C620 motor control  🧪
 │   ├── esp-drv8323-gatedriver — DRV8323 three-phase gate driver        🚧
 │   ├── esp-ads1115-adc        — ADS1115 16-bit ADC                     🧪
-│   ├── esp-max17048-fuelgauge — MAX17048 1S fuel gauge                 🧪
-│   ├── esp-bq769x0-bms        — bq769x0 3–15S pack monitor             🧪
 │   ├── esp-ssd1306-oled       — SSD1306 OLED                           🧪
 │   ├── esp-ws2812-led         — WS2812 LEDs over RMT                   🚧
 │   ├── esp-sn65hvd230-can     — Classic CAN over TWAI                  ✅  <a href="https://github.com/JonasAtelier/esp-sn65hvd230-can">🔗</a>
@@ -108,7 +115,7 @@
 
 <p align="center">
   <img src="assets/ledger.svg"
-       alt="68 repositories, 53 written in C, over 660 commits, active since 2023"
+       alt="67 repositories, 52 written in C, over 680 commits, active since 2023"
        width="100%">
 </p>
 
