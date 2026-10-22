@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 234" role="img" aria-labelledby="st sd">
   <title id="st">Jonas Atelier workshop ledger</title>
-  <desc id="sd">68 repositories, 53 written in C, over 660 commits, active since 2023, with a language bar by repository.</desc>
+  <desc id="sd">67 repositories, 52 written in C, over 680 commits, active since 2023, with a language bar by repository.</desc>
   <defs>
     <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0d2238"/><stop offset="1" stop-color="#102f34"/>
@@ -31,18 +31,18 @@
 
   <rect width="1200" height="234" rx="24" fill="url(#bg3)"/>
   <text class="hd" x="60" y="44">WORKSHOP LEDGER</text>
-  <text class="hd" x="1140" y="44" text-anchor="end" fill="#f2bd68">SNAPSHOT 2026-10-14</text>
+  <text class="hd" x="1140" y="44" text-anchor="end" fill="#f2bd68">SNAPSHOT 2026-10-22</text>
 
   <g class="tile" style="animation-delay:0.10s">
-    <text class="num" x="210" y="98" text-anchor="middle">68</text>
+    <text class="num" x="210" y="98" text-anchor="middle">67</text>
     <text class="cap" x="210" y="120" text-anchor="middle">repositories</text>
   </g>
   <g class="tile" style="animation-delay:0.23s">
-    <text class="num" x="470" y="98" text-anchor="middle">53</text>
+    <text class="num" x="470" y="98" text-anchor="middle">52</text>
     <text class="cap" x="470" y="120" text-anchor="middle">written in C</text>
   </g>
   <g class="tile" style="animation-delay:0.36s">
-    <text class="num" x="730" y="98" text-anchor="middle">661+</text>
+    <text class="num" x="730" y="98" text-anchor="middle">689+</text>
     <text class="cap" x="730" y="120" text-anchor="middle">commits</text>
   </g>
   <g class="tile" style="animation-delay:0.49s">
@@ -51,18 +51,18 @@
   </g>
 
   <g clip-path="url(#barclip)">
-    <rect x="60.0" y="150" width="841.8" height="14" fill="#70e1b2" style="animation-delay:0.50s" class="seg"/>
-    <rect x="901.8" y="150" width="47.6" height="14" fill="#3f8f80" style="animation-delay:0.59s" class="seg"/>
-    <rect x="949.4" y="150" width="47.6" height="14" fill="#e0a25a" style="animation-delay:0.68s" class="seg"/>
-    <rect x="997.1" y="150" width="31.8" height="14" fill="#f2bd68" style="animation-delay:0.77s" class="seg"/>
-    <rect x="1028.8" y="150" width="31.8" height="14" fill="#51c99c" style="animation-delay:0.86s" class="seg"/>
-    <rect x="1060.6" y="150" width="15.9" height="14" fill="#5fbf9a" style="animation-delay:0.95s" class="seg"/>
-    <rect x="1076.5" y="150" width="15.9" height="14" fill="#9edbc4" style="animation-delay:1.04s" class="seg"/>
-    <rect x="1092.4" y="150" width="47.6" height="14" fill="#2f6a63" style="animation-delay:1.13s" class="seg"/>
+    <rect x="60.0" y="150" width="838.2" height="14" fill="#70e1b2" style="animation-delay:0.50s" class="seg"/>
+    <rect x="898.2" y="150" width="48.4" height="14" fill="#3f8f80" style="animation-delay:0.59s" class="seg"/>
+    <rect x="946.6" y="150" width="48.4" height="14" fill="#e0a25a" style="animation-delay:0.68s" class="seg"/>
+    <rect x="994.9" y="150" width="32.2" height="14" fill="#f2bd68" style="animation-delay:0.77s" class="seg"/>
+    <rect x="1027.2" y="150" width="32.2" height="14" fill="#51c99c" style="animation-delay:0.86s" class="seg"/>
+    <rect x="1059.4" y="150" width="16.1" height="14" fill="#5fbf9a" style="animation-delay:0.95s" class="seg"/>
+    <rect x="1075.5" y="150" width="16.1" height="14" fill="#9edbc4" style="animation-delay:1.04s" class="seg"/>
+    <rect x="1091.6" y="150" width="48.4" height="14" fill="#2f6a63" style="animation-delay:1.13s" class="seg"/>
     <rect class="shine" x="0" y="150" width="260" height="14" fill="url(#sweep)"/>
   </g>
 
-  <circle cx="60" cy="187" r="4.5" fill="#70e1b2"/><text class="leg" x="71" y="191">C 53</text>
+  <circle cx="60" cy="187" r="4.5" fill="#70e1b2"/><text class="leg" x="71" y="191">C 52</text>
   <circle cx="124" cy="187" r="4.5" fill="#3f8f80"/><text class="leg" x="135" y="191">Shell 3</text>
   <circle cx="209" cy="187" r="4.5" fill="#e0a25a"/><text class="leg" x="220" y="191">Rust 3</text>
   <circle cx="287" cy="187" r="4.5" fill="#f2bd68"/><text class="leg" x="298" y="191">C++ 2</text>
@@ -71,5 +71,5 @@
   <circle cx="558" cy="187" r="4.5" fill="#9edbc4"/><text class="leg" x="569" y="191">JavaScript 1</text>
   <circle cx="679" cy="187" r="4.5" fill="#2f6a63"/><text class="leg" x="690" y="191">none 3</text>
 
-  <text class="foot" x="60" y="218">every repository, public and private, archived ones aside &#183; language by repository, not bytes &#183; commits counted on local clones</text>
+  <text class="foot" x="60" y="218">every repository, public and private, archived ones aside &#183; language by repository, not bytes &#183; commits counted on default branches</text>
 </svg>
