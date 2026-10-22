@@ -7,6 +7,20 @@
 <h1 align="center">Jonas Atelier</h1>
 
 <p align="center">
+  Hi, I'm Jonas Chan — a robotics hobbyist. I build robots in my spare
+  time, and the firmware they run on.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/C99-00599C?style=flat-square&logo=c&logoColor=white" alt="C99">
+  <img src="https://img.shields.io/badge/ESP--IDF_v5.5-E7352C?style=flat-square&logo=espressif&logoColor=white" alt="ESP-IDF v5.5">
+  <img src="https://img.shields.io/badge/STM32_HAL-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white" alt="STM32 HAL">
+  <img src="https://img.shields.io/badge/ROS_2-22314E?style=flat-square&logo=ros&logoColor=white" alt="ROS 2">
+  <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust">
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux">
+</p>
+
+<p align="center">
   Drivers for the parts robots are actually built from — motors and encoders,
   sensing, power, buses. Plain C. The control and filter libraries are one
   header and one source file; the drivers are category libraries that build
