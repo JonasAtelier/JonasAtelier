@@ -17,6 +17,8 @@ I’m Jonas Chan. I build robots and write the C libraries that connect their se
 | An ESP32 project with CAN, a display, or an SD card | [ESP-IDF components](https://github.com/JonasAtelier/jonas-atelier-libraries#esp-idf-components) |
 | Firmware for a robot or a custom board | [Robots and build tools](https://github.com/JonasAtelier/jonas-atelier-libraries#robots-and-build-tools) |
 
+The driver and algorithm libraries are open source under the MIT license. Each driver library includes a step-by-step guide for adding it to an ESP-IDF or STM32 project.
+
 ## Featured libraries
 
 | [UPID feedback loop](https://github.com/JonasAtelier/upid) | [ESP32 CAN transceiver](https://github.com/JonasAtelier/esp-sn65hvd230-can) |
