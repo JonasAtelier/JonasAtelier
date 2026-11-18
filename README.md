@@ -19,9 +19,10 @@ I’m Jonas Chan. I build robots and write the C libraries that connect their se
 
 ## Featured libraries
 
-**[UPID](https://github.com/JonasAtelier/upid)** is a feedback controller in one C source file and one header. The heater example runs on a laptop. Change a gain and watch how fast the temperature reaches its target, how far it overshoots, and where it settles. [Run the simulation](https://github.com/JonasAtelier/upid#run-the-heater-example) · [Explore the tuning measurements](https://github.com/JonasAtelier/upid/blob/HEAD/TUNING.md)
-
-**[Classic CAN for ESP32](https://github.com/JonasAtelier/esp-sn65hvd230-can)** connects the ESP32’s built-in CAN controller to an SN65HVD230 transceiver. Start by listening for a frame from a second node. Then try identifier filters, callbacks, or recovery after a bus fault. Physical bench validation is pending. [Wiring and first frame](https://github.com/JonasAtelier/esp-sn65hvd230-can#receive-your-first-frame)
+| [UPID feedback loop](https://github.com/JonasAtelier/upid) | [ESP32 CAN transceiver](https://github.com/JonasAtelier/esp-sn65hvd230-can) |
+| :---: | :---: |
+| [<img src="https://raw.githubusercontent.com/JonasAtelier/upid/stable/assets/control-loop.svg" height="118" alt="UPID feedback loop and simulated step response">](https://github.com/JonasAtelier/upid) | [<img src="https://raw.githubusercontent.com/JonasAtelier/esp-sn65hvd230-can/stable/doc/module.jpg" height="118" alt="SN65HVD230 CAN transceiver breakout">](https://github.com/JonasAtelier/esp-sn65hvd230-can) |
+| Run a heater simulation on a laptop. Change the gains to see overshoot and settling time. [Run the example](https://github.com/JonasAtelier/upid#run-the-heater-example) · [Tuning measurements](https://github.com/JonasAtelier/upid/blob/HEAD/TUNING.md) | Connect two CAN nodes, receive a frame, then try filters and callbacks. Physical bench validation is pending. [Wiring and first frame](https://github.com/JonasAtelier/esp-sn65hvd230-can#receive-your-first-frame) |
 
 ## On the bench
 
